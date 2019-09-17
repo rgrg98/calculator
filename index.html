@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<title>포장지 면적을 구하는 방법</title>
+	<style type="text/css">
+		body{font-size: 20px; font-weight: 5px; text-align:center;}
+		div{font-size:38px;color:#8e8e8e;font-family: 'Black Han Sans', sans-serif;}
+		#ok{border-radius:20px;background:#ff9999;}
+		#garo{border-radius:5px;font-family: 'Nanum Gothic', sans-serif}
+		#sero{border-radius:5px;font-family: 'Nanum Gothic', sans-serif}
+		#height{border-radius:5px;font-family: 'Nanum Gothic', sans-serif}
+		#sic{font-size:20px;color:#ff9999;font-family: 'Black Han Sans', sans-serif;}
+		#monitor{font-size:30px;}
+	</style>	
+</head>
+<body>
+	<div>당신의 선물의 <span style="color:#ff9999">최소 포장지 면적</span> 구해봅시다!</div>
+	<img src="box.png" style="width:35%;margin-top:-30px;"> <br>
+	<p id="sic">최소 포장지 구하는 식=2(AB+AC+BC+C*C)</p>
+	가로 <br><input type="text" id="garo" placeholder="cm"> <br>
+	세로 <br><input type="text" id="sero" placeholder="cm"> <br>
+	높이 <br><input type="text" id="height" placeholder="cm"> <br>
+		 <input type="button" value="확인" id="ok"> <br><br>
+<div id="monitor">포장지의 <span style="color:#ff9999">최소 면적</span>은? </div>
+
+
+	<script>
+		ok.onclick = function(){
+		 var area = (garo.value*sero.value + garo.value*height.value + sero.value*height.value + Math.pow(height.value,2))*2;
+		monitor.innerHTML = "당신의 선물은"+ "&nbsp;"  + "최소" + "&nbsp;" + area + "cm2" +"포장지를 사용합니다.";
+	}
+	</script>
+</body>
+</html>
